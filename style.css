@@ -1,0 +1,75 @@
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  text-align: center;
+  animation: rainbow 30s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+  0%   { background: linear-gradient(to right, #000428, #004e92); }
+  25%  { background: linear-gradient(to right, #004e92, #0066cc); }
+  50%  { background: linear-gradient(to right, #0066cc, #ff6666); }
+  75%  { background: linear-gradient(to right, #ff6666, #cc33ff); }
+  100% { background: linear-gradient(to right, #cc33ff, #000428); }
+}
+
+/* Header y título animado */
+header {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 20px;
+}
+.titulo-animado {
+  font-size: 3em;
+  margin: 0;
+  animation: glow 2s ease-in-out infinite alternate, pulse 2s infinite;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff416c, 0 0 20px #ff4b2b; }
+  to { text-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff416c; }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.30); }
+  100% { transform: scale(1); }
+}
+
+/* Grid de juegos */
+main {
+  padding: 20px;
+}
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.game-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.game-card:hover {
+  transform: scale(1.05);
+}
+.game-card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.game-card h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+  background: #ddd;
+  padding: 10px;
+  margin-top: 20px;
+}
